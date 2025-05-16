@@ -105,6 +105,7 @@ The goal of this project is to streamline knowledge retrieval by combining multi
 ## Author
 
 **Soumya Sourav Das**
-> AI & Machine Learning Enthusiast
+
+[Portfolio](https://soumya-sourav-portfolio.vercel.app/) | [GitHub](https://github.com/Celestial317) | [LinkedIn](https://www.linkedin.com/in/soumyasouravdas/)
 
 ---
