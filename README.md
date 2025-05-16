@@ -1,18 +1,18 @@
 ---
 
-# 🧠 **RAG-Powered Knowledge Agent with Intelligent Query Routing**
+# **RAG-Powered Knowledge Agent with Intelligent Query Routing**
 
 A **Retrieval-Augmented Generation (RAG)** system enhanced with a **Query Agent** that intelligently routes user queries to the most suitable knowledge source—**arXiv**, **Wikipedia**, or **Tavily**—for contextually accurate and up-to-date responses.
 
 ---
 
-## 🔍 Overview
+## Overview
 
 This project integrates **LangChain**, **Google Gemini**, and multi-source retrieval mechanisms to create an intelligent knowledge system. Based on the semantic content of a user's query, the agent dynamically selects the most relevant source and delivers precise, high-quality answers with minimal user effort.
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 1. **Install required dependencies:**
 
@@ -29,7 +29,7 @@ TAVILY_API_KEY=your_tavily_api_key
 
 ---
 
-## 🚀 Usage Guide
+## Usage Guide
 
 To start the system, run:
 
@@ -45,7 +45,7 @@ Once running, you can input a natural language query. The agent will:
 
 ---
 
-## 💬 Example Interaction
+## Example Interaction
 
 ```
 Your query:
@@ -71,7 +71,7 @@ Alexander Graham Bell is credited with inventing the first practical telephone i
 
 ---
 
-## 🧩 Project Structure
+## Project Structure
 
 | File               | Description                                              |
 | ------------------ | -------------------------------------------------------- |
@@ -80,7 +80,7 @@ Alexander Graham Bell is credited with inventing the first practical telephone i
 
 ---
 
-## 🤖 Query Routing Logic
+## Query Routing Logic
 
 A Gemini-powered large language model is used to classify incoming queries and select one of the following sources:
 
@@ -92,19 +92,19 @@ This automated source selection ensures that each query is matched with the most
 
 ---
 
-## 🎯 Project Motivation
+## Project Motivation
 
 The goal of this project is to streamline knowledge retrieval by combining multiple sources into a unified, intelligent agent. Rather than relying on static search logic or a single API, this system employs a dynamic routing approach that enhances:
 
-* **Precision** in selecting data sources
-* **Responsiveness** for time-sensitive information
-* **User experience** through automation and clarity
+* Precision in selecting data sources
+* Responsiveness for time-sensitive information
+* User experience through automation and clarity
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 **Soumya Sourav Das**
-> *AI & Machine Learning Enthusiast*
+> AI & Machine Learning Enthusiast
 
 ---
