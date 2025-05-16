@@ -1,117 +1,105 @@
-# Query-Based Knowledge Agent
+---
 
-A smart knowledge agent that routes queries to the appropriate information sources (arXiv papers, Wikipedia, or Tavily search) based on the query content.
+# 🧠**RAG-Powered Knowledge Agent with Query Routing**
 
-## Overview
+A **knowledge-based Retrieval-Augmented Generation (RAG)** system powered by a **Query Agent** that smartly routes user questions to the most relevant source — **arXiv**, **Wikipedia**, or **Tavily** — for accurate and contextual answers.
 
-This system uses LangChain and Google Gemini to create a knowledge retrieval system with intelligent routing. When you ask a question, the system automatically decides whether to search arXiv scientific papers, Wikipedia for general knowledge, or use the Tavily search API for current information based on the nature of your query.
+---
 
-## Setup
+## 🔍 Overview
 
-1. Install the required dependencies:
+This project combines the power of **LangChain**, **Google Gemini**, and **multi-source routing** to intelligently fetch answers based on the nature of a user's query. The agent analyzes your input and decides which knowledge base to consult, delivering answers with minimal effort and maximum relevance.
+
+---
+
+## ⚙️ Setup
+
+1. **Install dependencies**:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Create a `.env` file in the `Query_Based_Agent` directory with the following variables:
+2. **Create a `.env` file** in the project root:
 
 ```
 GOOGLE_API_KEY=your_google_api_key
 TAVILY_API_KEY=your_tavily_api_key
 ```
 
-## Usage
+---
 
-### Running the Agent
+## 🚀 How to Use
+
+Run the agent using:
 
 ```bash
 python main.py
 ```
 
-This will start the agent in interactive mode. You can ask questions, and the system will intelligently route your query to the appropriate knowledge source.
+Then simply enter your query. The system will:
 
-### Interactive Mode
+* Detect the intent of your question
+* Route it to arXiv (for research), Wikipedia (for general facts), or Tavily (for current events)
+* Display a well-formatted answer in your terminal
 
-The agent runs in interactive mode and will:
-- Automatically select the appropriate source for your query
-- Show which source was chosen (arXiv, Wikipedia, or Tavily)
-- Process your query against that information source
-- Present the answer with clear formatting
+---
 
-You can:
-- Type `exit` or `quit` to exit the application
-- Ask any question and let the router decide which source to use
+## 💬 Example Session
 
-Example:
 ```
 Your query:
-What is the latest research on transformer models?
+What are the breakthroughs in AI safety research?
 
 Processing....
 Chosen Source: arxiv
 Processing....
 Answer:
-[Detailed response about transformer models from arXiv papers]
-
---------------------------------------------------
+Recent papers discuss interpretability, alignment techniques, and robust training strategies for safer AI development.
 ```
 
-## Components
-
-- `knowledge_rag.py`: Contains the retrieval chains for different knowledge sources including arXiv, Wikipedia, and Tavily
-- `main.py`: Implements the router logic and interactive query interface
-
-## Source Selection Logic
-
-The router automatically selects the most appropriate source based on the following criteria:
-
-- **arXiv**: Used for scientific papers, research, academic topics, machine learning, medical research, and educational domains
-- **Wikipedia**: Used for factual information, historical data, and encyclopedia-style knowledge
-- **Tavily**: Used for current events, news, general web search, and topics not well-covered by academic papers or reference materials
-
-## Technical Implementation
-
-The system uses LangChain's components:
-- Retrieval chains built with RunnablePassthrough for efficient data processing
-- Specialized retrievers for each source (arXiv, Wikipedia, Tavily)
-- Custom prompts tailored to each information source
-- Gemini model for both routing decisions and answer generation
-
-## Example Queries and Outputs
-
-### Scientific Research (arXiv)
 ```
 Your query:
-What are the latest advances in large language models?
-
-Processing....
-Chosen Source: arxiv
-Processing....
-Answer:
-Recent advances in large language models (LLMs) include architectural improvements like mixture-of-experts (MoE), better training techniques such as reinforcement learning from human feedback (RLHF), and innovations in multimodal capabilities allowing models to process text, images, and audio together.
-```
-
-### General Knowledge (Wikipedia)
-```
-Your query:
-What was the impact of the Industrial Revolution?
+Who invented the telephone?
 
 Processing....
 Chosen Source: wikipedia
 Processing....
 Answer:
-The Industrial Revolution, which began in the late 18th century, transformed economies from agrarian to industrial, introduced mechanized manufacturing, steam power, and factory systems. Its impacts included urbanization, improved living standards, technological innovation, but also pollution, poor working conditions, and social inequality.
+Alexander Graham Bell is credited with inventing the first practical telephone in 1876.
 ```
 
-### Current Information (Tavily)
-```
-Your query:
-What are the latest developments in renewable energy technology?
+---
 
-Processing....
-Chosen Source: tavily
-Processing....
-Answer:
-Recent developments in renewable energy technology include advanced perovskite solar cells achieving higher efficiency rates, floating offshore wind farms expanding global capacity, improved energy storage solutions like solid-state batteries, green hydrogen production scaling up, and AI optimization of grid management systems.
-```
+## 🧩 Project Structure
+
+| File               | Purpose                                                |
+| ------------------ | ------------------------------------------------------ |
+| `main.py`          | CLI and routing logic for handling queries             |
+| `knowledge_rag.py` | Chains for fetching data from arXiv, Wikipedia, Tavily |
+
+---
+
+## 🤖 Source Routing Logic
+
+The system uses a **Gemini-powered LLM** to classify the query and choose from:
+
+* **arXiv** → Academic/scientific questions
+* **Wikipedia** → Historical or factual general knowledge
+* **Tavily** → Live/current events and web-based search
+
+---
+
+## 🎯 Motivation
+
+This project was built to simplify multi-source information retrieval. Instead of hardcoding the source or relying on a single tool, we built a **flexible Query Agent** that picks the right tool for the job — enhancing **accuracy**, **speed**, and **usability**.
+
+---
+
+## 👨‍💻 Created By
+
+**Soumya Sourav Das**
+
+> An AI-ML enthusiast
+---
+
