@@ -1,26 +1,26 @@
 ---
 
-# 🧠**RAG-Powered Knowledge Agent with Query Routing**
+# 🧠 **RAG-Powered Knowledge Agent with Intelligent Query Routing**
 
-A **knowledge-based Retrieval-Augmented Generation (RAG)** system powered by a **Query Agent** that smartly routes user questions to the most relevant source — **arXiv**, **Wikipedia**, or **Tavily** — for accurate and contextual answers.
+A **Retrieval-Augmented Generation (RAG)** system enhanced with a **Query Agent** that intelligently routes user queries to the most suitable knowledge source—**arXiv**, **Wikipedia**, or **Tavily**—for contextually accurate and up-to-date responses.
 
 ---
 
 ## 🔍 Overview
 
-This project combines the power of **LangChain**, **Google Gemini**, and **multi-source routing** to intelligently fetch answers based on the nature of a user's query. The agent analyzes your input and decides which knowledge base to consult, delivering answers with minimal effort and maximum relevance.
+This project integrates **LangChain**, **Google Gemini**, and multi-source retrieval mechanisms to create an intelligent knowledge system. Based on the semantic content of a user's query, the agent dynamically selects the most relevant source and delivers precise, high-quality answers with minimal user effort.
 
 ---
 
-## ⚙️ Setup
+## ⚙️ Setup Instructions
 
-1. **Install dependencies**:
+1. **Install required dependencies:**
 
 ```bash
 pip install -r requirements.txt
 ```
 
-2. **Create a `.env` file** in the project root:
+2. **Configure environment variables** by creating a `.env` file in the root directory:
 
 ```
 GOOGLE_API_KEY=your_google_api_key
@@ -29,23 +29,23 @@ TAVILY_API_KEY=your_tavily_api_key
 
 ---
 
-## 🚀 How to Use
+## 🚀 Usage Guide
 
-Run the agent using:
+To start the system, run:
 
 ```bash
 python main.py
 ```
 
-Then simply enter your query. The system will:
+Once running, you can input a natural language query. The agent will:
 
-* Detect the intent of your question
-* Route it to arXiv (for research), Wikipedia (for general facts), or Tavily (for current events)
-* Display a well-formatted answer in your terminal
+* Interpret the intent of the query
+* Route it to the appropriate data source (arXiv, Wikipedia, or Tavily)
+* Retrieve and format the response for terminal display
 
 ---
 
-## 💬 Example Session
+## 💬 Example Interaction
 
 ```
 Your query:
@@ -73,33 +73,38 @@ Alexander Graham Bell is credited with inventing the first practical telephone i
 
 ## 🧩 Project Structure
 
-| File               | Purpose                                                |
-| ------------------ | ------------------------------------------------------ |
-| `main.py`          | CLI and routing logic for handling queries             |
-| `knowledge_rag.py` | Chains for fetching data from arXiv, Wikipedia, Tavily |
+| File               | Description                                              |
+| ------------------ | -------------------------------------------------------- |
+| `main.py`          | Handles CLI, routing logic, and system orchestration     |
+| `knowledge_rag.py` | Implements retrieval chains for arXiv, Wikipedia, Tavily |
 
 ---
 
-## 🤖 Source Routing Logic
+## 🤖 Query Routing Logic
 
-The system uses a **Gemini-powered LLM** to classify the query and choose from:
+A Gemini-powered large language model is used to classify incoming queries and select one of the following sources:
 
-* **arXiv** → Academic/scientific questions
-* **Wikipedia** → Historical or factual general knowledge
-* **Tavily** → Live/current events and web-based search
+* **arXiv**: For technical, scientific, or academic topics
+* **Wikipedia**: For general knowledge, factual history, and definitions
+* **Tavily**: For current events and real-time web content
 
----
-
-## 🎯 Motivation
-
-This project was built to simplify multi-source information retrieval. Instead of hardcoding the source or relying on a single tool, we built a **flexible Query Agent** that picks the right tool for the job — enhancing **accuracy**, **speed**, and **usability**.
+This automated source selection ensures that each query is matched with the most relevant and reliable data.
 
 ---
 
-## 👨‍💻 Created By
+## 🎯 Project Motivation
+
+The goal of this project is to streamline knowledge retrieval by combining multiple sources into a unified, intelligent agent. Rather than relying on static search logic or a single API, this system employs a dynamic routing approach that enhances:
+
+* **Precision** in selecting data sources
+* **Responsiveness** for time-sensitive information
+* **User experience** through automation and clarity
+
+---
+
+## 👨‍💻 Author
 
 **Soumya Sourav Das**
+> *AI & Machine Learning Enthusiast*
 
-> An AI-ML enthusiast
 ---
-
